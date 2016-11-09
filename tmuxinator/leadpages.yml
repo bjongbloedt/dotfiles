@@ -32,12 +32,14 @@ pre_window: workon leadpages && nvm install && nvm use
 
 windows:
   - site:
-      layout: main-horizontal
+      layout: split-horizontal
       panes:
-        - #empty
-        - gulp watch
         - support/runserver.default
-  - test:
+        - gulp watch
+  - terminal:
       layout:
       panes:
-        - pytest -nauto
+        - #empty
+  - editor:
+      panes:
+        - nvim
