@@ -26,12 +26,12 @@ filetype indent on
 " Map esc to jj in insert mode
 :imap jj <Esc>
 
+" Map the leader key to space
+let mapleader="\<SPACE>"
+
 call plug#begin('~/.config/nvim/plugged')
 " vim-fugitive
 " Plug 'tpope/vim-fugitive'
-
-" fzf
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Neomake
 Plug 'benekastah/neomake'
@@ -49,7 +49,10 @@ Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " You Complete Me
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py', 'for': 'python'}
+
+" Vim-test
+Plug 'janko-m/vim-test'
 
 " Languages
 " html / templates
@@ -86,3 +89,15 @@ colorscheme solarized
 autocmd! BufWritePost * Neomake
 let g:neomake_open_list = 2
 let g:neomake_python_enabled_makers = ['flake8', 'pep8']
+
+" YCM Settings
+
+" Vim-test settings
+let test#python#runner = 'pytest'
+
+"nmap <silent> <leader>t :TestNearest<CR>
+"nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>t :TestSuite<CR>
+"nmap <silent> <leader>l :TestLast<CR>
+"nmap <silent> <leader>g :TestVisit<CR>
+
