@@ -17,6 +17,7 @@ set smarttab
 set expandtab
 set softtabstop=4
 set backspace=2
+set colorcolumn=80
 
 " Enable file specific behavior like highlighting and indentation
 filetype on
@@ -86,8 +87,7 @@ set background=dark
 colorscheme solarized
 
 " neomake
-autocmd! BufWritePost * Neomake
-let g:neomake_open_list = 2
+autocmd! BufEnter *.py Neomake
 let g:neomake_python_enabled_makers = ['flake8', 'pep8']
 
 " YCM Settings
