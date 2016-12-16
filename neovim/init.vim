@@ -55,6 +55,9 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py', 'for': 'python'}
 " Vim-test
 Plug 'janko-m/vim-test'
 
+" ctrlP
+Plug 'ctrlpvim/ctrlp.vim'
+
 " Languages
 " html / templates
 Plug 'gregsexton/MatchTag', { 'for': 'html' } " match tags in html, similar to paren support
@@ -79,8 +82,8 @@ let NERDTreeShowHidden=1
 
 " Lightline
 let g:lightline = {
-	\ 'colorscheme': 'solarized',
-	\ }
+    \ 'colorscheme': 'solarized',
+    \ }
 
 " Color
 set background=dark
@@ -101,3 +104,9 @@ nmap <silent> <leader>t :TestSuite<CR>
 "nmap <silent> <leader>l :TestLast<CR>
 "nmap <silent> <leader>g :TestVisit<CR>
 
+"set listchars=tab:▸\ ,eol:¬\ ,space:▸
+"Ctrlp bindings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+" Ignore files in .gitignore
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
