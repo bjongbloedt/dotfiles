@@ -31,6 +31,11 @@ startup_pane: 1
 # post: tmux -CC attach -t leadbox
 
 windows:
-  - server: eval $(dinghy shellinit) && docker-compose up
-  - editor: nvim
-  - term: #empty
+  - main:
+      layout: 7143,272x70,0,0{130x70,0,0,0,141x70,131,0[141x34,131,0,1,141x35,131,35,2]}
+      panes:
+        - #empty
+        - ptw
+        - pane_with_multiple_commands:
+            - eval $(dinghy shellinit)
+            - docker-compose up

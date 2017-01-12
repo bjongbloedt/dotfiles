@@ -32,9 +32,11 @@ root: ~/<%= @settings["workspace"] %>
 
 windows:
   - base:
-      layout: cd26,272x62,0,0[272x39,0,0,26,272x22,0,40{90x22,0,40,27,90x22,91,40,28,90x22,182,40,29}]
+      layout: 
       panes:
         - nvim
         - ember server
         - ember test --server
+  - other:
+      panes:
         - #empty

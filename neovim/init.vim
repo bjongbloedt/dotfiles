@@ -2,6 +2,7 @@
 
 syntax enable
 set encoding=utf-8
+set hidden
 
 " -- Display
 set title
@@ -43,6 +44,9 @@ Plug 'altercation/vim-colors-solarized'
 " lightline
 Plug 'itchyny/lightline.vim'
 
+" vim-bufferline
+Plug 'bling/vim-bufferline'
+
 " Moder JS support (indent, syntax, etc)
 Plug 'pangloss/vim-javascript'
 
@@ -83,6 +87,12 @@ let NERDTreeShowHidden=1
 " Lightline
 let g:lightline = {
     \ 'colorscheme': 'solarized',
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste'], [ 'filename' ], [ 'bufferline' ] ],
+    \ },
+    \ 'component': {
+    \   'bufferline': '%{bufferline#refresh_status()}%{g:bufferline_status_info.before . g:bufferline_status_info.current . g:bufferline_status_info.after}'
+    \   }
     \ }
 
 " Color
@@ -93,6 +103,17 @@ colorscheme solarized
 autocmd! BufEnter *.py Neomake
 let g:neomake_python_enabled_makers = ['flake8', 'pep8']
 
+" Buffers as tabs
+" To open a new empty buffer
+nmap <leader>T :enew<cr>
+" Move to the next buffer
+nmap <leader>l :bnext<CR>
+" Move to the previous buffer
+nmap <leader>h :bprevious<CR>
+" Close the current buffer and move to the previous one
+nmap <leader>bq :bp <BAR> bd #<CR>
+" Show all open buffers and their status
+nmap <leader>bl :ls<CR>
 " YCM Settings
 
 " Vim-test settings
