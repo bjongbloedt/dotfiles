@@ -54,7 +54,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " You Complete Me
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py', 'for': 'python'}
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py', 'for': 'python'}
 
 " Vim-test
 Plug 'janko-m/vim-test'
@@ -100,7 +100,7 @@ set background=dark
 colorscheme solarized
 
 " neomake
-autocmd! BufEnter *.py Neomake
+autocmd! BufWritePost,BufReadPost *.py Neomake
 let g:neomake_python_enabled_makers = ['flake8', 'pep8']
 
 " Buffers as tabs
