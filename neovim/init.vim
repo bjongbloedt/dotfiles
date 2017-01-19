@@ -4,21 +4,20 @@ syntax enable
 set encoding=utf-8
 set hidden
 
-" -- Display
+" Display
 set title
 set number
 set ruler
 set wrap
-
 set scrolloff=3
 set guioptions=T
-set tabstop=4
-set shiftwidth=4
 set smarttab
-set expandtab
-set softtabstop=4
-set backspace=2
 set colorcolumn=80
+set expandtab
+
+" Language stuff
+autocmd Filetype * set tabstop=2| set shiftwidth=2
+autocmd Filetype python set tabstop=4| set shiftwidth=4
 
 " Enable file specific behavior like highlighting and indentation
 filetype on
@@ -53,9 +52,6 @@ Plug 'pangloss/vim-javascript'
 " Tree
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" You Complete Me
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.py', 'for': 'python'}
-
 " Vim-test
 Plug 'janko-m/vim-test'
 
@@ -71,11 +67,8 @@ Plug 'digitaltoad/vim-jade', { 'for': ['jade', 'pug'] } " jade support
 Plug 'juvenn/mustache.vim', { 'for': 'mustache' } " mustache support
 
 " JavaScript
-Plug 'gavocanov/vim-js-indent', { 'for': 'javascript' } " JavaScript indent
-Plug 'moll/vim-node', { 'for': 'javascript' } " node support
-Plug 'othree/yajs.vim', { 'for': 'javascript' } " JavaScript syntax plugin
-Plug 'othree/es.next.syntax.vim', { 'for': 'javascript' } " ES6 and beyond syntax
-Plug 'mxw/vim-jsx', { 'for': ['jsx', 'javascript'] } " JSX support
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx']}
+Plug 'mxw/vim-jsx', { 'for': ['javscript', 'javascript.jsx']}
 call plug#end()
 
 " NERDTree
@@ -100,8 +93,9 @@ set background=dark
 colorscheme solarized
 
 " neomake
-autocmd! BufWritePost,BufReadPost *.py Neomake
+autocmd! BufWritePost,BufReadPost * Neomake
 let g:neomake_python_enabled_makers = ['flake8', 'pep8']
+let g:neomake_javascript_enabled_markers = ['eslint']
 
 " Buffers as tabs
 " To open a new empty buffer
