@@ -18,6 +18,8 @@ set expandtab
 " Language stuff
 autocmd Filetype * set tabstop=2| set shiftwidth=2
 autocmd Filetype python set tabstop=4| set shiftwidth=4
+autocmd BufRead,BufNewFile .babelrc setfiletype json
+autocmd BufRead,BufNewFile .eslintrc setfiletype json
 
 " Enable file specific behavior like highlighting and indentation
 filetype on
