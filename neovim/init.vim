@@ -110,7 +110,6 @@ nmap <leader>h :bprevious<CR>
 nmap <leader>bq :bp <BAR> bd #<CR>
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
-" YCM Settings
 
 " Vim-test settings
 let test#python#runner = 'pytest'
