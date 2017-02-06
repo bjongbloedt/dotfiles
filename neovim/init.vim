@@ -98,6 +98,7 @@ colorscheme solarized
 autocmd! BufWritePost,BufReadPost * Neomake
 let g:neomake_python_enabled_makers = ['flake8', 'pep8']
 let g:neomake_javascript_enabled_markers = ['eslint']
+let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
 
 " Buffers as tabs
 " To open a new empty buffer
