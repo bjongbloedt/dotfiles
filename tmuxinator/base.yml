@@ -1,16 +1,16 @@
-# ~/.tmuxinator/leadbox.yml
+# ~/.tmuxinator/base.yml
 
-name: api
-root: <%= @arg[0] %>
+name: base
+root: <%= @args[0] %>
 
 # Optional tmux socket
 # socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
-pre: dinghy up
+# pre: dinghy up
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: workon <%= @arg[1] %> 
+# pre_window: workon <%= @args[1] %> 
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -36,6 +36,4 @@ windows:
       panes:
         - #empty
         - #empty
-        - pane_with_multiple_commands:
-            - eval $(dinghy shellinit)
-            - docker-compose up
+        - #empty
