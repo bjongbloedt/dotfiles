@@ -26,16 +26,10 @@ filetype on
 filetype plugin on
 filetype indent on
 
-" Map esc to jj in insert mode
-:imap jj <Esc>
-
 " Map the leader key to space
 let mapleader="\<SPACE>"
 
 call plug#begin('~/.config/nvim/plugged')
-" vim-fugitive
-" Plug 'tpope/vim-fugitive'
-
 " Neomake
 Plug 'benekastah/neomake'
 
@@ -53,12 +47,6 @@ Plug 'pangloss/vim-javascript'
 
 " Tree
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin'
-
-" Vim-test
-Plug 'janko-m/vim-test'
-
-" ctrlP
-Plug 'ctrlpvim/ctrlp.vim'
 
 " Languages
 " html / templates
@@ -111,19 +99,3 @@ nmap <leader>h :bprevious<CR>
 nmap <leader>bq :bp <BAR> bd #<CR>
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
-
-" Vim-test settings
-let test#python#runner = 'pytest'
-
-"nmap <silent> <leader>t :TestNearest<CR>
-"nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>t :TestSuite<CR>
-"nmap <silent> <leader>l :TestLast<CR>
-"nmap <silent> <leader>g :TestVisit<CR>
-
-"set listchars=tab:▸\ ,eol:¬\ ,space:▸
-"Ctrlp bindings
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-" Ignore files in .gitignore
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
