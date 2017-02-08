@@ -39,8 +39,14 @@ Plug 'altercation/vim-colors-solarized'
 " lightline
 Plug 'itchyny/lightline.vim'
 
+" Closing braces and etc
+Plug 'Raimondi/delimitMate'
+
 " vim-bufferline
 Plug 'bling/vim-bufferline'
+
+" Engine
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " Moder JS support (indent, syntax, etc)
 Plug 'pangloss/vim-javascript'
@@ -99,3 +105,12 @@ nmap <leader>h :bprevious<CR>
 nmap <leader>bq :bp <BAR> bd #<CR>
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsSnippetsDir = "~/.config/nvim/plugged/vim-snippets/UltiSnips"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
