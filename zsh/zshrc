@@ -49,11 +49,11 @@ ZSH_THEME="theunraveler"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, web-search, nvm)
+plugins=(git nvm tmux tmuxinator virtualenvwrapper brew docker-compose)
 
 # User configuration
 
-export PATH="/Users/benjongbloedt/google-cloud-sdk/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -82,15 +82,4 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# The next line updates PATH for the Google Cloud SDK.
-# source '/Users/benjongbloedt/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables shell command completion for gcloud.
-# source '/Users/benjongbloedt/google-cloud-sdk/completion.zsh.inc'
-
-source "/usr/local/bin/virtualenvwrapper.sh"
-
-source ~/.bin/_docker-compose.zsh
-
-source ~/.bin/tmuxinator.zsh
+alias mux=tmuxinator
