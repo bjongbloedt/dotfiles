@@ -3,8 +3,11 @@
 # Install xcode utils
 xcode-select --install
 
-# Install Homebrew
+# Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Install Homebrew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Update Homebrew
 brew update
@@ -13,6 +16,7 @@ brew update
 brew upgrade
 
 # Installations, roll out
+brew install python
 brew install ack
 brew install docker
 brew install docker-machine-driver-xhyve
@@ -24,6 +28,10 @@ brew install nvm
 
 # into the caskroom
 brew tap caskroom/cask
+brew cask install atom
+brew cask install firefox
+brew cask install google-chrome
+brew cask install spotify
 
 # Set default editor to neovim
 export EDITOR='nvim'
