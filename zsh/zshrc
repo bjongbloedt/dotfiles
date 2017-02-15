@@ -52,10 +52,7 @@ ZSH_THEME="theunraveler"
 plugins=(git nvm tmux tmuxinator virtualenvwrapper brew docker-compose)
 
 # User configuration
-
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:$PATH"
-# export MANPATH="/usr/local/man:$MANPATH"
-
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
