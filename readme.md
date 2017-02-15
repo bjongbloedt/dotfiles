@@ -10,3 +10,4 @@ ln -s ~/.dotfiles/bash/bash_profile ~/.bash_profile
 cd ~
 ls -la | grep .-\>
 ```
+
