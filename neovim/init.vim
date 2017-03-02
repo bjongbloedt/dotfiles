@@ -1,6 +1,5 @@
 " VIM Configuration -- Ben Jongbloedt
 
-syntax enable
 set encoding=utf-8
 set hidden
 
@@ -23,6 +22,7 @@ autocmd BufRead,BufNewFile .babelrc setfiletype json
 autocmd BufRead,BufNewFile .eslintrc setfiletype json
 
 " Enable file specific behavior like highlighting and indentation
+syntax on
 filetype on
 filetype plugin on
 filetype indent on
