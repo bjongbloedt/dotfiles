@@ -7,6 +7,7 @@ set hidden
 " Display
 set title
 set number
+set rnu
 set ruler
 set wrap
 set scrolloff=3
