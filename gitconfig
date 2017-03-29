@@ -1,5 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
 name = benjongbloedt
 email = bjongbloedt@users.noreply.github.com 
+
+[core]
+excludesfile = /home/ben/.gitignore
