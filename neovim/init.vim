@@ -2,6 +2,7 @@
 
 set encoding=utf-8
 set hidden
+set termguicolors
 
 " Display
 set title
@@ -41,7 +42,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'benekastah/neomake'
 
 " theme
-Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
 
 " lightline
 Plug 'itchyny/lightline.vim'
@@ -82,7 +83,7 @@ let NERDTreeShowHidden=1
 
 " Lightline
 let g:lightline = {
-    \ 'colorscheme': 'solarized',
+    \ 'colorscheme': 'gruvbox',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste'], [ 'filename' ], [ 'bufferline' ] ],
     \ },
@@ -93,7 +94,7 @@ let g:lightline = {
 
 " Color
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
 
 " neomake
 autocmd! BufWritePost,BufReadPost * Neomake
