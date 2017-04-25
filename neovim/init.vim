@@ -73,6 +73,9 @@ Plug 'juvenn/mustache.vim', { 'for': 'mustache' } " mustache support
 " JavaScript
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx']}
 Plug 'mxw/vim-jsx', { 'for': ['javscript', 'javascript.jsx']}
+
+" Typescript
+Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
 call plug#end()
 
 " NERDTree
@@ -99,8 +102,8 @@ colorscheme gruvbox
 " neomake
 autocmd! BufWritePost,BufReadPost * Neomake
 let g:neomake_python_enabled_makers = ['flake8', 'pep8']
-let g:neomake_javascript_enabled_markers = ['eslint']
-let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_typescript_enabled_makers = ['tslint']
 
 " Buffers as tabs
 " To open a new empty buffer
