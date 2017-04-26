@@ -16,6 +16,7 @@ apps=(
   httpie
   neovim/neovim/neovim
   nvm
+  yarn
 )
 
 brew install "${apps[@]}"
