@@ -1,7 +1,16 @@
 # This is Git's per-user configuration file.
 [user]
-name = benjongbloedt
+name = bjongbloedt
 email = bjongbloedt@users.noreply.github.com 
 
 [core]
 excludesfile = /home/ben/.gitignore
+
+[alias]
+glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+# No need for a GUI - a nice, colorful, graphical representation
+# https://git-scm.com/docs/git-log
+# via https://medium.com/@payload.dd/thanks-for-the-git-st-i-will-use-this-4da5839a21a4
+
+st = status --short --branch
+# Short version of git status
