@@ -5,8 +5,8 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Symlinks
 ln -sfv "$DOTFILES_DIR/git/gitconfig" ~/.gitconfig
-ln -sfv "$DOTFILES_DIR/git/gitignore ~/.gitignore
-ln -sfv "$DOTFILES_DIR/tmux/tmux.conf ~/.tmux.conf
+ln -sfv "$DOTFILES_DIR/git/gitignore" ~/.gitignore
+ln -sfv "$DOTFILES_DIR/tmux/tmux.conf" ~/.tmux.conf
 ln -sfv "$DOTFILES_DIR/ctags" ~/.ctags
 ln -sfv "$DOTFILES_DIR/neovim/init.vim" ~/.config/nvim/init.vim
 ln -sfv "$DOTFILES_DIR/zsh/zshrc" ~/.zshrc
@@ -14,10 +14,10 @@ ln -sfv "$DOTFILES_DIR/bash/bash_profile" ~/.bash_profile
 ln -sfv "$DOTFILES_DIR/bash/bashrc" ~/.bashrc
 
 # Packages
-if [ "$(uname)" == "Linux"]; then
+if [ "$(uname)" == "Linux" ]; then
   echo "Installing packages for linux"
 fi
 
-if [ "$(uname)" == "Darwin"]; then
+if [ "$(uname)" == "Darwin" ]; then
   echo "Installing packages for darwin"
 fi
