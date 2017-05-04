@@ -17,6 +17,9 @@ apps=(
   neovim/neovim/neovim
   nvm
   yarn
+  ctags
 )
 
 brew install "${apps[@]}"
+
+alias ctags="`brew --prefix`/bin/ctags"

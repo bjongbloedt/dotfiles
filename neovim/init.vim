@@ -53,14 +53,11 @@ Plug 'Raimondi/delimitMate'
 " vim-bufferline
 Plug 'bling/vim-bufferline'
 
-" Engine
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
 " Moder JS support (indent, syntax, etc)
 Plug 'pangloss/vim-javascript'
 
-" Tree
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin'
+" Emmet
+Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'vue']}
 
 " Languages
 " html / templates
@@ -76,13 +73,11 @@ Plug 'mxw/vim-jsx', { 'for': ['javscript', 'javascript.jsx']}
 
 " Typescript
 Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
-call plug#end()
 
-" NERDTree
-let g:NERDTreeHijackNetrw=0
-map <C-n> :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$']
-let NERDTreeShowHidden=1
+"Vue
+Plug 'posva/vim-vue', {'for': ['vue']}
+
+call plug#end()
 
 " Lightline
 let g:lightline = {
@@ -117,11 +112,12 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
 
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsSnippetsDir = "~/.config/nvim/plugged/vim-snippets/UltiSnips"
+" Fuzzy finder without plugin
+" Serach down into subfolders
+" Provides tab completion for all file related tasks
+set path+=**
+" Display all matching files when we tab complete
+set wildmenu
 
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+" Make ctags
+command! MakeTags !ctags -R .
