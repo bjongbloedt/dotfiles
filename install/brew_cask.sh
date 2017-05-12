@@ -10,5 +10,7 @@ apps=(
   google-chrome
   spotify
   iterm2
+  docker
+  google-drive
 )
 brew cask install "${apps[@]}"

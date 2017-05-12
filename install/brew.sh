@@ -9,7 +9,6 @@ brew upgrade
 apps=(
   python
   ack
-  docker
   docker-machine-driver-xhyve
   tmux
   tmate
