@@ -9,5 +9,6 @@ apps=(
   firefox
   google-chrome
   spotify
+  iterm2
 )
 brew cask install "${apps[@]}"

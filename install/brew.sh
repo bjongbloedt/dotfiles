@@ -15,7 +15,6 @@ apps=(
   tmate
   httpie
   neovim/neovim/neovim
-  nvm
   yarn
   ctags
 )
