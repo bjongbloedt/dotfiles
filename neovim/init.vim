@@ -16,6 +16,9 @@ set smarttab
 set colorcolumn=80
 set expandtab
 
+" Setting Spellcheck
+set spell spelllang=en_us
+
 " Language stuff
 autocmd Filetype * set tabstop=2| set shiftwidth=2
 autocmd Filetype python set tabstop=4| set shiftwidth=4
@@ -83,7 +86,7 @@ call plug#end()
 let g:lightline = {
     \ 'colorscheme': 'gruvbox',
     \ 'active': {
-    \   'left': [ [ 'mode', 'paste'], [ 'filename' ], [ 'bufferline' ] ],
+    \   'left': [ [ 'mode', 'paste'], [ 'filename' ]],
     \ },
     \ 'component': {
     \   'bufferline': '%{bufferline#refresh_status()}%{g:bufferline_status_info.before . g:bufferline_status_info.current . g:bufferline_status_info.after}'
