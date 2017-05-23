@@ -54,6 +54,11 @@
 --langmap=markdown:.md
 --regex-markdown=/^(#+[ \t]+.*)/\1/h,heading,headings/
 
+--langdef=Go
+--langmap=Go:.go
+--regex-Go=/func([ \t]+\([^)]+\))?[ \t]+([a-zA-Z0-9_]+)/\2/f,func/
+--regex-Go=/type[ \t]+([a-zA-Z_][a-zA-Z0-9_]+)/\1/t,type/
+
 --langmap=vim:+(vimrc)
 
 --exclude=.git
