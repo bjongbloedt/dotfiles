@@ -3,6 +3,7 @@
 apps=(
   virtualenv
   virtualenvwrapper
+  tmuxp
 )
 
 pip install "${apps[@]}"

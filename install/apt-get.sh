@@ -13,8 +13,9 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update
 
 # Install all the things
-sudo apt-get install git -y
 sudo apt-get install ack-grep -y
 sudo apt-get install neovim -y
+sudo apt-get install tmux -y
+sudo apt-get install python-pip -y
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 sudo apt-get install yarn -y
