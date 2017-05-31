@@ -1,0 +1,10 @@
+donjayamanne.python
+eg2.tslint
+eg2.vscode-npm-script
+liuji-jim.vue
+lukehoban.Go
+ms-vscode.csharp
+ms-vscode.PowerShell
+PeterJausovec.vscode-docker
+saviorisdead.theme-gruvbox-alt
+vscodevim.vim
