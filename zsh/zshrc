@@ -53,6 +53,8 @@ plugins=(git nvm tmux tmuxinator virtualenvwrapper brew docker-compose)
 
 # User configuration
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:$PATH"
+export GOPATH="$HOME/workspace/go"
+export PATH=$PATH:$GOPATH/bin
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
