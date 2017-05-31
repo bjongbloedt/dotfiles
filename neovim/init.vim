@@ -62,6 +62,9 @@ Plug 'pangloss/vim-javascript'
 " Emmet
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'vue']}
 
+" Deoplete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
 " Languages
 " html / templates
 Plug 'gregsexton/MatchTag', { 'for': 'html' } " match tags in html, similar to paren support
@@ -73,12 +76,19 @@ Plug 'juvenn/mustache.vim', { 'for': 'mustache' } " mustache support
 " JavaScript
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx']}
 Plug 'mxw/vim-jsx', { 'for': ['javscript', 'javascript.jsx']}
+Plug 'wokalski/autocomplete-flow', { 'for': ['javscript', 'javascript.jsx']}
 
 " Typescript
 Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
 
 "Vue
 Plug 'posva/vim-vue', {'for': ['vue']}
+
+"Go
+Plug 'zchee/deoplete-go', { 'do': 'make', 'for': ['go'] }
+
+"Python
+Plug 'zchee/deoplete-jedi'
 
 call plug#end()
 
@@ -124,3 +134,6 @@ set wildmenu
 
 " Make ctags
 command! MakeTags !ctags -R .
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1

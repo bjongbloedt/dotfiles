@@ -8,6 +8,7 @@ brew upgrade
 
 apps=(
   python
+  python3
   ack
   docker-machine-driver-xhyve
   tmux
