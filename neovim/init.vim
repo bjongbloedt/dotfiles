@@ -86,6 +86,7 @@ Plug 'posva/vim-vue', {'for': ['vue']}
 
 "Go
 Plug 'zchee/deoplete-go', { 'do': 'make', 'for': ['go'] }
+Plug 'fatih/vim-go'
 
 "Python
 Plug 'zchee/deoplete-jedi'
