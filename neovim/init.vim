@@ -24,6 +24,12 @@ autocmd Filetype * set tabstop=2| set shiftwidth=2
 autocmd Filetype python set tabstop=4| set shiftwidth=4
 autocmd BufRead,BufNewFile .babelrc setfiletype json
 autocmd BufRead,BufNewFile .eslintrc setfiletype json
+autocmd FileType go nmap <leader>b <Plug>(go-build)
+autocmd FileType go nmap <leader>r <Plug>(go-run)
+autocmd FileType go nmap <leader>t <Plug>(go-test)
+
+" Write to file automatically if :make or :GoBuild is called
+set autowrite
 
 " Enable file specific behavior like highlighting and indentation
 syntax on
@@ -64,6 +70,7 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'vue']}
 
 " Deoplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi', {'for': ['python']}
 
 " Languages
 " html / templates
@@ -84,11 +91,9 @@ Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
 "Vue
 Plug 'posva/vim-vue', {'for': ['vue']}
 
-"Go
-Plug 'zchee/deoplete-go', { 'do': 'make', 'for': ['go'] }
+"Golang
+Plug 'fatih/vim-go', {'do': ':GoInstallBinaries', 'for': ['go']}
 
-"Python
-Plug 'zchee/deoplete-jedi'
 
 call plug#end()
 
@@ -114,16 +119,10 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_typescript_enabled_makers = ['tslint']
 
 " Buffers as tabs
-" To open a new empty buffer
-nmap <leader>T :enew<cr>
 " Move to the next buffer
 nmap <leader>l :bnext<CR>
 " Move to the previous buffer
 nmap <leader>h :bprevious<CR>
-" Close the current buffer and move to the previous one
-nmap <leader>bq :bp <BAR> bd #<CR>
-" Show all open buffers and their status
-nmap <leader>bl :ls<CR>
 
 " Fuzzy finder without plugin
 " Serach down into subfolders
@@ -136,4 +135,14 @@ set wildmenu
 command! MakeTags !ctags -R .
 
 " Use deoplete.
-let g:deoplete#enable_at_startup = 1
+if has("python3")
+  let g:deoplete#enable_at_startup = 1
+endif
+
+" Vim-go settings
+let g:go_list_type = "quickfix"
+let g:go_fmt_command = "goimports"
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
