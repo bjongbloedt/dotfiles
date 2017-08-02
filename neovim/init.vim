@@ -94,7 +94,6 @@ Plug 'posva/vim-vue', {'for': ['vue']}
 "Golang
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries', 'for': ['go']}
 
-
 call plug#end()
 
 " Lightline
