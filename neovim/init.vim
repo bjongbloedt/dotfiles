@@ -1,5 +1,4 @@
 " VIM Configuration -- Ben Jongbloedt
-
 set encoding=utf-8
 set hidden
 set termguicolors
@@ -12,11 +11,19 @@ set ruler
 set wrap
 set scrolloff=3
 set guioptions=T
+set expandtab
 set smarttab
 set colorcolumn=80
-set expandtab
+set hlsearch
 
-" Setting Spellcheck
+" List out nbsp, trailing whitespace, and tabs
+exec "set listchars=tab:\uBB\uBB,nbsp:~,trail:\uB7"
+set list
+
+" Remap ; to :
+nnoremap ; :
+
+" Setting Spell check
 set spell spelllang=en_us
 
 " Language stuff
