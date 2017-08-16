@@ -34,6 +34,10 @@ autocmd BufRead,BufNewFile .eslintrc setfiletype json
 autocmd FileType go nmap <leader>b <Plug>(go-build)
 autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <leader>t <Plug>(go-test)
+au FileType go set noexpandtab
+au FileType go set shiftwidth=4
+au FileType go set softtabstop=4
+au FileType go set tabstop=4
 
 " Write to file automatically if :make or :GoBuild is called
 set autowrite
@@ -78,6 +82,8 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'vue']}
 " Deoplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi', {'for': ['python']}
+Plug 'zchee/deoplete-go', { 'do': 'make' 'for': ['go']}
+Plug 'mhartington/nvim-typescript', {'for': ['typescript', 'javascript']}
 
 " Languages
 " html / templates
@@ -143,6 +149,10 @@ command! MakeTags !ctags -R .
 " Use deoplete.
 if has("python3")
   let g:deoplete#enable_at_startup = 1
+  let g:deoplete#enable_debug = 1
+  let g:deoplete#enable_profile = 1
+  autocmd CompleteDone * pclose " To close preview window of deoplete automagically"
+  call deoplete#enable_logging('DEBUG', '~/deoplete.log')
 endif
 
 " Vim-go settings
