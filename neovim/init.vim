@@ -82,7 +82,7 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'vue']}
 " Deoplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi', {'for': ['python']}
-Plug 'zchee/deoplete-go', { 'do': 'make' 'for': ['go']}
+Plug 'zchee/deoplete-go', { 'do': 'make', 'for': ['go']}
 Plug 'mhartington/nvim-typescript', {'for': ['typescript', 'javascript']}
 
 " Languages
