@@ -7,10 +7,13 @@ email = bjongbloedt@users.noreply.github.com
 excludesfile = /home/ben/.gitignore
 
 [alias]
-glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 # No need for a GUI - a nice, colorful, graphical representation
 # https://git-scm.com/docs/git-log
 # via https://medium.com/@payload.dd/thanks-for-the-git-st-i-will-use-this-4da5839a21a4
+l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 
-st = status --short --branch
 # Short version of git status
+st = status --short --branch
+
+# Checkout feature
+feature = !"git checkout -b feature/$1"
