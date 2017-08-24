@@ -83,17 +83,6 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias mux=tmuxinator
-alias log=git glog
-alias c=commit
-
-commit() {
-  local message=$@
-  if [-z "${message// }"]
-    then echo "commit message missing"
-  else
-    git commit -am "$message"
-  fi
-}
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
