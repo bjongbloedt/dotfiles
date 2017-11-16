@@ -55,8 +55,8 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
-" Neomake
-Plug 'benekastah/neomake'
+" Ale
+Plug 'w0rp/ale'
 
 " theme
 Plug 'morhetz/gruvbox'
@@ -112,12 +112,6 @@ let g:lightline = {
 set background=dark
 colorscheme gruvbox
 
-" neomake
-autocmd! BufWritePost,BufReadPost * Neomake
-let g:neomake_python_enabled_makers = ['flake8', 'pep8']
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_typescript_enabled_makers = ['tslint']
-
 " Buffers as tabs
 " Move to the next buffer
 nmap <leader>l :bnext<CR>
@@ -133,3 +127,8 @@ set wildmenu
 
 " Make ctags
 command! MakeTags !ctags -R .
+
+let g:ale_fixers = {
+\   'python': ['autopep8'],
+\}
+let g:ale_fix_on_save = 1
