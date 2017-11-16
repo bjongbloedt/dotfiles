@@ -6,7 +6,7 @@ set termguicolors
 " Display
 set title
 set number
-set rnu
+set relativenumber
 set ruler
 set wrap
 set scrolloff=3
@@ -25,6 +25,7 @@ nnoremap ; :
 
 " Setting Spell check
 set spell spelllang=en_us
+
 
 " Language stuff
 autocmd Filetype * set tabstop=2| set shiftwidth=2
@@ -50,6 +51,16 @@ filetype indent on
 
 " Map the leader key to space
 let mapleader="\<SPACE>"
+
+" edit vimrc
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Quotes
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
+
+inoremap jk <esc>
 
 " auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
@@ -111,14 +122,14 @@ call plug#end()
 
 " Lightline
 let g:lightline = {
-    \ 'colorscheme': 'gruvbox',
-    \ 'active': {
-    \   'left': [ [ 'mode', 'paste'], [ 'filename' ]],
-    \ },
-    \ 'component': {
-    \   'bufferline': '%{bufferline#refresh_status()}%{g:bufferline_status_info.before . g:bufferline_status_info.current . g:bufferline_status_info.after}'
-    \   }
-    \ }
+      \ 'colorscheme': 'gruvbox',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste'], [ 'filename' ]],
+      \ },
+      \ 'component': {
+      \   'bufferline': '%{bufferline#refresh_status()}%{g:bufferline_status_info.before . g:bufferline_status_info.current . g:bufferline_status_info.after}'
+      \   }
+      \ }
 
 " Color
 set background=dark
