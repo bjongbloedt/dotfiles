@@ -16,10 +16,6 @@ set smarttab
 set colorcolumn=80
 set hlsearch
 
-" List out nbsp, trailing whitespace, and tabs
-exec "set listchars=tab:\uBB\uBB,nbsp:~,trail:\uB7"
-set list
-
 " Remap ; to :
 nnoremap ; :
 
@@ -32,16 +28,6 @@ autocmd Filetype * set tabstop=2| set shiftwidth=2
 autocmd Filetype python set tabstop=4| set shiftwidth=4
 autocmd BufRead,BufNewFile .babelrc setfiletype json
 autocmd BufRead,BufNewFile .eslintrc setfiletype json
-autocmd FileType go nmap <leader>b <Plug>(go-build)
-autocmd FileType go nmap <leader>r <Plug>(go-run)
-autocmd FileType go nmap <leader>t <Plug>(go-test)
-au FileType go set noexpandtab
-au FileType go set shiftwidth=4
-au FileType go set softtabstop=4
-au FileType go set tabstop=4
-
-" Write to file automatically if :make or :GoBuild is called
-set autowrite
 
 " Enable file specific behavior like highlighting and indentation
 syntax on
@@ -90,12 +76,6 @@ Plug 'pangloss/vim-javascript'
 " Emmet
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'vue']}
 
-" Deoplete
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi', {'for': ['python']}
-Plug 'zchee/deoplete-go', { 'do': 'make', 'for': ['go']}
-Plug 'mhartington/nvim-typescript', {'for': ['typescript', 'javascript']}
-
 " Languages
 " html / templates
 Plug 'gregsexton/MatchTag', { 'for': 'html' } " match tags in html, similar to paren support
@@ -114,9 +94,6 @@ Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
 
 "Vue
 Plug 'posva/vim-vue', {'for': ['vue']}
-
-"Golang
-Plug 'fatih/vim-go', {'do': ':GoInstallBinaries', 'for': ['go']}
 
 call plug#end()
 
@@ -156,20 +133,3 @@ set wildmenu
 
 " Make ctags
 command! MakeTags !ctags -R .
-
-" Use deoplete.
-if has("python3")
-  let g:deoplete#enable_at_startup = 1
-  let g:deoplete#enable_debug = 1
-  let g:deoplete#enable_profile = 1
-  autocmd CompleteDone * pclose " To close preview window of deoplete automagically"
-  call deoplete#enable_logging('DEBUG', '~/deoplete.log')
-endif
-
-" Vim-go settings
-let g:go_list_type = "quickfix"
-let g:go_fmt_command = "goimports"
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
