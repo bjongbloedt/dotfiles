@@ -17,6 +17,8 @@ apps=(
   neovim/neovim/neovim
   yarn
   ctags
+  pipenv
+  mercurial
 )
 
 brew install "${apps[@]}"

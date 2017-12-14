@@ -11,6 +11,5 @@ apps=(
   spotify
   iterm2
   docker
-  google-drive
 )
 brew cask install "${apps[@]}"

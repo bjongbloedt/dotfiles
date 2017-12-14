@@ -12,6 +12,7 @@ ln -sfv "$DOTFILES_DIR/neovim/init.vim" ~/.config/nvim/init.vim
 ln -sfv "$DOTFILES_DIR/zsh/zshrc" ~/.zshrc
 ln -sfv "$DOTFILES_DIR/bash/bash_profile" ~/.bash_profile
 ln -sfv "$DOTFILES_DIR/bash/bashrc" ~/.bashrc
+ln -sfv "$DOTFILES_DIR/hg/hgrc" ~/.hgrc
 
 # Packages
 if [ "$(uname)" == "Linux" ]; then
