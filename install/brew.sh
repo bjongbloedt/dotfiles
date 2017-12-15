@@ -19,6 +19,7 @@ apps=(
   ctags
   pipenv
   mercurial
+  groovysdk
 )
 
 brew install "${apps[@]}"

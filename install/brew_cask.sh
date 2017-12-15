@@ -11,5 +11,6 @@ apps=(
   spotify
   iterm2
   docker
+  java
 )
 brew cask install "${apps[@]}"
