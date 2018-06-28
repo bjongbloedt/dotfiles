@@ -10,7 +10,6 @@ apps=(
   python
   python3
   ack
-  docker-machine-driver-xhyve
   tmux
   tmate
   httpie
@@ -20,6 +19,7 @@ apps=(
   pipenv
   mercurial
   groovysdk
+  awscli
 )
 
 brew install "${apps[@]}"

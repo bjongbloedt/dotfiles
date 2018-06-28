@@ -49,13 +49,17 @@ ZSH_THEME="theunraveler"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm tmux tmuxinator brew docker-compose, kubectl)
+plugins=(nvm tmux tmuxinator brew docker-compose kubectl git)
 
 # User configuration
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:$PATH"
 export GOPATH="$HOME/workspace/go"
 export GOBIN="$HOME/workspace/go/bin"
+export GOROOT=/usr/local/opt/go/libexec
+export JAVA_HOME=$(/usr/libexec/java_home)
+export GRADLE_HOME=/usr/local/opt/gradle/libexec
 export PATH=$PATH:$GOBIN
+export AWS_REGION=us-east-1
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment

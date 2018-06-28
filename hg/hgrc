@@ -22,3 +22,4 @@ username = Ben Jongbloedt <ben.jongbloedt@foodsby.com>
 # (see 'hg help extensions' for more info)
 #
 # churn =
+purge =
