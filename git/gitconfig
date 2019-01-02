@@ -3,6 +3,11 @@
 name = bjongbloedt
 email = bjongbloedt@users.noreply.github.com 
 
+[credential "https://bitbucket.org/foodsby"]
+  [user]
+  name = Ben Jongbloedt
+  email = ben.jongbloedt@foodsby.com
+
 [core]
 excludesfile = /home/ben/.gitignore
 
