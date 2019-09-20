@@ -3,10 +3,8 @@
 name = bjongbloedt
 email = bjongbloedt@users.noreply.github.com 
 
-[credential "https://bitbucket.org/foodsby"]
-  [user]
-  name = Ben Jongbloedt
-  email = ben.jongbloedt@foodsby.com
+[includeIf "gitdir:~/workspace/foodsby/"]
+path = ~/workspace/foodsby/.gitconfig
 
 [core]
 excludesfile = /home/ben/.gitignore
@@ -22,3 +20,5 @@ st = status --short --branch
 
 # Checkout feature
 feature = !"git checkout -b feature/$1"
+
+tidy = !git checkout master && git pull && git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D

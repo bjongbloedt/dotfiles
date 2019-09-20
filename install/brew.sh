@@ -20,6 +20,7 @@ apps=(
   mercurial
   groovysdk
   awscli
+  bazelbuild/tap/bazel
 )
 
 brew install "${apps[@]}"
