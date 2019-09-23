@@ -17,7 +17,7 @@ plugins=(nvm tmux tmuxinator brew docker-compose kubectl git)
 export PATH="$USER_BASE_PATH/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:$PATH"
 export AWS_REGION=us-east-1
 source $ZSH/oh-my-zsh.sh
-if ! [ -z "$(command -v pyenv)"]; then
+if ! [ -z "$(command -v pyenv)" ]; then
   eval "$(pyenv init -)"
 fi
 
