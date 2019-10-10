@@ -11,7 +11,7 @@ ZSH_THEME="theunraveler"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(nvm tmux tmuxinator brew docker-compose kubectl git)
+plugins=(nvm brew git)
 
 # User configuration
 export PATH="$USER_BASE_PATH/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:$PATH"
@@ -26,8 +26,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export SDKMAN_DIR="/Users/ben.jongbloedt/.sdkman"
-[[ -s "/Users/ben.jongbloedt/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/ben.jongbloedt/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
 [ -s "$HOME/.artifactory/creds.sh" ] && \. "$HOME/.artifactory/creds.sh"
 

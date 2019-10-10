@@ -5,12 +5,10 @@ brew install brew-cask
 brew tap caskroom/versions
 
 apps=(
-  atom
   firefox
-  google-chrome
   spotify
   iterm2
   docker
-  java
+  dotnet-sdk
 )
 brew cask install "${apps[@]}"
