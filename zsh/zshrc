@@ -11,16 +11,16 @@ ZSH_THEME="theunraveler"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(nvm brew git)
+plugins=(brew git)
 
 # User configuration
-export PATH="$USER_BASE_PATH/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:$PATH"
-export AWS_REGION=us-east-1
 source $ZSH/oh-my-zsh.sh
+
+export AWS_REGION=us-east-1
+
 if ! [ -z "$(command -v pyenv)" ]; then
   eval "$(pyenv init -)"
 fi
-
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
