@@ -17,6 +17,7 @@ plugins=(brew git)
 source $ZSH/oh-my-zsh.sh
 
 export AWS_REGION=us-east-1
+export PATH=/usr/local/bin:$PATH
 
 if ! [ -z "$(command -v pyenv)" ]; then
   eval "$(pyenv init -)"
