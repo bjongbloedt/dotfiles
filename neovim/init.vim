@@ -6,7 +6,6 @@ set termguicolors
 " Display
 set title
 set number
-set relativenumber
 set ruler
 set wrap
 set scrolloff=3
@@ -16,12 +15,8 @@ set smarttab
 set colorcolumn=80
 set hlsearch
 
-" Remap ; to :
-nnoremap ; :
-
 " Setting Spell check
 set spell spelllang=en_us
-
 
 " Language stuff
 autocmd Filetype * set tabstop=2| set shiftwidth=2
@@ -46,8 +41,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
 
-inoremap jk <esc>
-
 " auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -55,9 +48,6 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
-" Ale
-Plug 'w0rp/ale'
-
 " theme
 Plug 'morhetz/gruvbox'
 
@@ -70,9 +60,6 @@ Plug 'Raimondi/delimitMate'
 " vim-bufferline
 Plug 'bling/vim-bufferline'
 
-" Moder JS support (indent, syntax, etc)
-Plug 'pangloss/vim-javascript'
-
 " Emmet
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'vue']}
 
@@ -80,20 +67,14 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'vue']}
 " html / templates
 Plug 'gregsexton/MatchTag', { 'for': 'html' } " match tags in html, similar to paren support
 Plug 'othree/html5.vim', { 'for': 'html' } " html5 support
-Plug 'mustache/vim-mustache-handlebars' " mustach support
-Plug 'digitaltoad/vim-jade', { 'for': ['jade', 'pug'] } " jade support
-Plug 'juvenn/mustache.vim', { 'for': 'mustache' } " mustache support
 
 " JavaScript
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx']}
 Plug 'mxw/vim-jsx', { 'for': ['javscript', 'javascript.jsx']}
 Plug 'wokalski/autocomplete-flow', { 'for': ['javscript', 'javascript.jsx']}
 
-" Typescript
-Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
-
-"Vue
-Plug 'posva/vim-vue', {'for': ['vue']}
+"Rust
+Plug 'rust-lang/rust.vim', {'for': ['rust']}
 
 call plug#end()
 
@@ -112,12 +93,6 @@ let g:lightline = {
 set background=dark
 colorscheme gruvbox
 
-" Buffers as tabs
-" Move to the next buffer
-nmap <leader>l :bnext<CR>
-" Move to the previous buffer
-nmap <leader>h :bprevious<CR>
-
 " Fuzzy finder without plugin
 " Serach down into subfolders
 " Provides tab completion for all file related tasks
@@ -125,12 +100,5 @@ set path+=**
 " Display all matching files when we tab complete
 set wildmenu
 
-" Make ctags
-command! MakeTags !ctags -R .
-
-" Ale Settings
-let g:ale_fixers = {
-\   'python': ['autopep8'],
-\}
-let g:ale_fix_on_save = 1
-let g:ale_completion_enabled = 1
+" rust
+let g:rustfmt_autosave = 1
