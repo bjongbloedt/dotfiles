@@ -1,10 +1,9 @@
-# Install antigen
-[ ! -f antigen. ] && curl -L git.io/antigen > antigen.zsh
-source antigen.zsh
+source ~/.dotfiles/antigen/antigen.zsh
 
 # Configure plugins
 antigen use oh-my-zsh
 antigen bundle robbyrussell/oh-my-zsh plugins/git
+antigen bundle zsh-users/zsh-autosuggestions
 antigen theme robbyrussell/oh-my-zsh themes/theunraveler
 antigen apply
 
