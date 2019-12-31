@@ -7,7 +7,6 @@ brew tap caskroom/versions
 apps=(
   firefox
   spotify
-  iterm2
   docker
   dotnet-sdk
 )

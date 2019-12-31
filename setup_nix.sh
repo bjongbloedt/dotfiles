@@ -7,7 +7,6 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ln -sfv "$DOTFILES_DIR/git/gitconfig" ~/.gitconfig
 ln -sfv "$DOTFILES_DIR/git/gitignore" ~/.gitignore
 ln -sfv "$DOTFILES_DIR/tmux/tmux.conf" ~/.tmux.conf
-ln -sfv "$DOTFILES_DIR/ctags" ~/.ctags
 ln -sfv "$DOTFILES_DIR/neovim/init.vim" ~/.config/nvim/init.vim
 ln -sfv "$DOTFILES_DIR/zsh/zshrc" ~/.zshrc
 ln -sfv "$DOTFILES_DIR/bash/bash_profile" ~/.bash_profile

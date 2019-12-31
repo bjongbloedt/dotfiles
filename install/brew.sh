@@ -10,12 +10,11 @@ apps=(
   python
   python3
   ack
-  tmux
-  tmate
   httpie
   neovim/neovim/neovim
   pipenv
   awscli
+  kitty
 )
 
 brew install "${apps[@]}"
