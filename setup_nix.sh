@@ -12,6 +12,7 @@ ln -sfv "$DOTFILES_DIR/zsh/zshrc" ~/.zshrc
 ln -sfv "$DOTFILES_DIR/bash/bash_profile" ~/.bash_profile
 ln -sfv "$DOTFILES_DIR/bash/bashrc" ~/.bashrc
 ln -sfv "$DOTFILES_DIR/hg/hgrc" ~/.hgrc
+ln -sfv "$DOTFILES_DIR/kitty/kitty.conf" ~/.config/kitty/kitty.conf
 
 # Packages
 if [ "$(uname)" == "Linux" ]; then

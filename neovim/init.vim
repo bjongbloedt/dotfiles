@@ -76,6 +76,9 @@ Plug 'wokalski/autocomplete-flow', { 'for': ['javscript', 'javascript.jsx']}
 "Rust
 Plug 'rust-lang/rust.vim', {'for': ['rust']}
 
+" Golang
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
+
 call plug#end()
 
 " Lightline

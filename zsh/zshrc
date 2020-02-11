@@ -2,21 +2,19 @@ source ~/.dotfiles/antigen/antigen.zsh
 
 # Configure plugins
 antigen use oh-my-zsh
+
 antigen bundle robbyrussell/oh-my-zsh plugins/git
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle lukechilds/zsh-nvm
+
 antigen theme robbyrussell/oh-my-zsh themes/theunraveler
 antigen apply
-
-export PATH=/usr/local/bin:"$HOME/.dotnet/tools":"$HOME/.cargo/bin":$PATH
 
 if ! [ -z "$(command -v pyenv)" ]; then
   eval "$(pyenv init -)"
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
+[ ! -d "$HOME/.sdkman" ] && curl -s "https://get.sdkman.io" | bash
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
