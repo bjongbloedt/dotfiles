@@ -7,7 +7,7 @@ email = bjongbloedt@users.noreply.github.com
 path = ~/workspace/foodsby/.gitconfig
 
 [core]
-excludesfile = /home/ben/.gitignore
+excludesfile = ~/.gitignore
 
 [alias]
 # No need for a GUI - a nice, colorful, graphical representation
