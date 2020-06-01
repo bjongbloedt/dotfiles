@@ -1,18 +1,31 @@
-source ~/.dotfiles/antigen/antigen.zsh
-
-# Configure plugins
-antigen use oh-my-zsh
-
-antigen bundle robbyrussell/oh-my-zsh plugins/git
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle lukechilds/zsh-nvm
-
-antigen theme robbyrussell/oh-my-zsh themes/theunraveler
-antigen apply
-
-if ! [ -z "$(command -v pyenv)" ]; then
-  eval "$(pyenv init -)"
+export ZPLUG_HOME="$HOME/.zplug"
+if [[ ! -d "$HOME/.zplug" ]]
+then
+   git clone https://github.com/zplug/zplug $ZPLUG_HOME
 fi
+
+source ~/.zplug/init.zsh
+
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/pyenv", from:oh-my-zsh
+zplug "plugins/sdk", from:oh-my-zsh
+zplug "plugins/kubectl", from:oh-my-zsh
+zplug "themes/theunraveler", from:oh-my-zsh, as:theme
+zplug "zsh-users/zsh-autosuggestions"
+zplug "lukechilds/zsh-nvm"
+
+# Install packages that have not been installed yet
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    else
+        echo
+    fi
+fi
+
+# Load Plugins
+zplug load
 
 [ ! -d "$HOME/.sdkman" ] && curl -s "https://get.sdkman.io" | bash
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -30,3 +43,6 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='nvim'
 fi
+
+alias ec="$EDITOR $HOME/.zshrc"
+alias sc="source $HOME/.zshrc"
