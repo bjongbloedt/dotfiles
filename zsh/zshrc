@@ -31,11 +31,11 @@ zplug load
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
-[ -s "$HOME/.artifactory/creds.sh" ] && \. "$HOME/.artifactory/creds.sh"
-
-[ -s "$HOME/.boot/creds.sh" ] && \. "$HOME/.boot/creds.sh"
-
-[ -s "$HOME/.aws/creds.sh" ] && \. "$HOME/.aws/creds.sh"
+# Load local env variables
+if [[ -a "$HOME/.localrc" ]]
+then
+  source "$HOME/.localrc"
+fi
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
