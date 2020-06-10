@@ -10,6 +10,7 @@ zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/pyenv", from:oh-my-zsh
 zplug "plugins/sdk", from:oh-my-zsh
 zplug "plugins/kubectl", from:oh-my-zsh
+zplug "plugins/helm", from:oh-my-zsh
 zplug "themes/theunraveler", from:oh-my-zsh, as:theme
 zplug "zsh-users/zsh-autosuggestions"
 zplug "lukechilds/zsh-nvm"
