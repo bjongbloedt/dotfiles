@@ -31,6 +31,7 @@ cask_apps=(
   firefox
   spotify
   docker
+  alacritty
 )
 
 brew cask install "${apps[@]}"
