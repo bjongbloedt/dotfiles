@@ -9,6 +9,7 @@ source ~/.zplug/init.zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/pyenv", from:oh-my-zsh
 zplug "plugins/sdk", from:oh-my-zsh
+zplug "plugins/brew", from:oh-my-zsh
 zplug "plugins/kubectl", from:oh-my-zsh
 zplug "plugins/helm", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
