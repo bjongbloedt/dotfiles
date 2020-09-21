@@ -16,14 +16,13 @@ brew update
 brew upgrade
 
 apps=(
-  python
   python3
   ack
   httpie
   neovim/neovim/neovim
   pipenv
   awscli
-  kitty
+  tmux
 )
 brew install "${apps[@]}"
 
@@ -32,6 +31,10 @@ cask_apps=(
   spotify
   docker
   alacritty
+  visual-studio-code
+  tunnelblick
+  joplin
+  jetbrains-toolbox
 )
 
 brew cask install "${apps[@]}"

@@ -13,6 +13,7 @@ ln -sfv "$DOTFILES_DIR/bash/bash_profile" ~/.bash_profile
 ln -sfv "$DOTFILES_DIR/bash/bashrc" ~/.bashrc
 ln -sfv "$DOTFILES_DIR/hg/hgrc" ~/.hgrc
 ln -sfv "$DOTFILES_DIR/kitty/kitty.conf" ~/.config/kitty/kitty.conf
+ln -sfv "$DOTFILES_DIR/alacritty/alacritty.conf" ~/.config/alacritty/alacritty.conf
 
 # Packages
 if [ "$(uname)" == "Linux" ]; then
