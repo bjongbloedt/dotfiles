@@ -55,7 +55,7 @@ Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 
 " git
-Plug "airblade/vim-gitgutter"
+Plug 'airblade/vim-gitgutter'
 
 " Closing braces and etc
 Plug 'Raimondi/delimitMate'
