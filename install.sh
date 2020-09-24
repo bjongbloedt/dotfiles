@@ -69,7 +69,7 @@ if [ "$(uname)" == "Darwin" ]; then
     visualvm
   )
 
-  brew cask install "${apps[@]}"
+  brew cask install "${cask_apps[@]}"
   
   echo "Setup SDKMan"
   [ ! -d "$HOME/.sdkman" ] && curl -s "https://get.sdkman.io" | bash
