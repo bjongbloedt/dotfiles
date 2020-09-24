@@ -3,6 +3,11 @@
 export DOTFILES_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+# Config file locations for symlinks
+mkdir -p ~/.config/nvim
+mkdir -p ~/.config/kitty
+mkdir -p ~/.config/alacritty
+
 # Symlinks
 ln -sfv "$DOTFILES_DIR/git/gitconfig" ~/.gitconfig
 ln -sfv "$DOTFILES_DIR/git/gitignore" ~/.gitignore
@@ -12,10 +17,8 @@ ln -sfv "$DOTFILES_DIR/zsh/zshrc" ~/.zshrc
 ln -sfv "$DOTFILES_DIR/bash/bash_profile" ~/.bash_profile
 ln -sfv "$DOTFILES_DIR/bash/bashrc" ~/.bashrc
 ln -sfv "$DOTFILES_DIR/hg/hgrc" ~/.hgrc
-mkdir -p ~/.config/kitty
 ln -sfv "$DOTFILES_DIR/kitty/kitty.conf" ~/.config/kitty/kitty.conf
-mkdir -p ~/.config/alacritty
-ln -sfv "$DOTFILES_DIR/alacritty/alacritty.conf" ~/.config/alacritty/alacritty.conf
+ln -sfv "$DOTFILES_DIR/alacritty/alacritty.yml" ~/.config/alacritty/alacritty.yml
 
 # Packages
 if [ "$(uname)" == "Linux" ]; then
