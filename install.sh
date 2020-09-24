@@ -62,7 +62,6 @@ if [ "$(uname)" == "Darwin" ]; then
     spotify
     docker
     alacritty
-    visual-studio-code
     tunnelblick
     joplin
     jetbrains-toolbox
