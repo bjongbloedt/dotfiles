@@ -16,7 +16,8 @@ zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/brew", from:oh-my-zsh
 zplug "plugins/terraform", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
-zplug "lib/directories.zsh", from:oh-my-zsh
+zplug "lib/directories", from:oh-my-zsh
+zplug "lib/history", from:oh-my-zsh
 zplug "themes/theunraveler", from:oh-my-zsh, as:theme
 zplug "zsh-users/zsh-autosuggestions"
 zplug "lukechilds/zsh-nvm"
@@ -53,3 +54,6 @@ fi
 
 alias ec="$EDITOR $HOME/.zshrc"
 alias sc="source $HOME/.zshrc"
+alias vim="nvim"
+alias vi="vim"
+alias v="vi"
