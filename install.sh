@@ -53,6 +53,8 @@ if [ "$(uname)" == "Darwin" ]; then
     ack
     httpie
     neovim/neovim/neovim
+    pyenv
+    poetry
     pipenv
     awscli
     tmux
