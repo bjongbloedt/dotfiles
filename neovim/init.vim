@@ -60,9 +60,6 @@ Plug 'airblade/vim-gitgutter'
 " Closing braces and etc
 Plug 'Raimondi/delimitMate'
 
-" vim-bufferline
-Plug 'bling/vim-bufferline'
-
 " Emmet
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'vue']}
 
@@ -89,10 +86,7 @@ let g:lightline = {
       \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste'], [ 'filename' ]],
-      \ },
-      \ 'component': {
-      \   'bufferline': '%{bufferline#refresh_status()}%{g:bufferline_status_info.before . g:bufferline_status_info.current . g:bufferline_status_info.after}'
-      \   }
+      \ }
       \ }
 
 " Color
