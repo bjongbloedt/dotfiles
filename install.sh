@@ -7,6 +7,7 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/kitty
 mkdir -p ~/.config/alacritty
+mkdir -p ~/.config/ptpython
 
 # Symlinks
 ln -sfv "$DOTFILES_DIR/git/gitconfig" ~/.gitconfig
@@ -19,6 +20,7 @@ ln -sfv "$DOTFILES_DIR/bash/bashrc" ~/.bashrc
 ln -sfv "$DOTFILES_DIR/hg/hgrc" ~/.hgrc
 ln -sfv "$DOTFILES_DIR/kitty/kitty.conf" ~/.config/kitty/kitty.conf
 ln -sfv "$DOTFILES_DIR/alacritty/alacritty.yml" ~/.config/alacritty/alacritty.yml
+ln -sfv "$DOTFILES_DIR/ptpython/config.py" ~/.config/ptpython/config.py
 
 # Packages
 if [ "$(uname)" == "Linux" ]; then
@@ -64,7 +66,6 @@ if [ "$(uname)" == "Darwin" ]; then
   echo "Installing brew cask apps"
   cask_apps=(
     firefox
-    spotify
     docker
     alacritty
     tunnelblick

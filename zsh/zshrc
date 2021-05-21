@@ -52,6 +52,9 @@ else
   export EDITOR='nvim'
 fi
 
+# ptpython config
+export PTPYTHON_CONFIG_HOME="$HOME/.config/ptpython"
+
 alias ec="$EDITOR $HOME/.zshrc"
 alias sc="source $HOME/.zshrc"
 alias vim="nvim"
